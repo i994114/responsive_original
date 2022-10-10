@@ -322,7 +322,7 @@ img {
   }
   &-ornament {
     .container-title {
-      span { // TODO: リファクタ必要（span以外を使うことも考えてclass名で指定すること）
+      .odd-title { // TODO: リファクタ必要（span以外を使うことも考えてclass名で指定すること）
         display: inline-block;
         background: #fff;
         padding: 0 10px;

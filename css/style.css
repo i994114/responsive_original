@@ -170,7 +170,7 @@ img {
     .container-body {
       padding-left: 15px;
       padding-right: 15px; } }
-  .container-ornament .container-title span {
+  .container-ornament .container-title .odd-title {
     display: inline-block;
     background: #fff;
     padding: 0 10px;
