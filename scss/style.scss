@@ -59,7 +59,9 @@ $space_3l: 40px;
 
 $font-family_corp: 'Amatic SC', cursive;
 $font-family_all: Quicksand, 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif; // TODO:リファクタ必要（変数にする）
-  
+
+$background-base: #f8f7fc;
+
 // メディアクエリのブレークポイント設定
 
 //@media screen and (max-width: 414px){
@@ -342,7 +344,7 @@ img {
       }
       &-lightGray {
         span {
-          background: #f8f7fc;
+          background: $background-base;
         }
       }
     }
@@ -358,7 +360,7 @@ img {
   overflow-y: scroll;
   margin: 0 auto;
   border-radius: 5px;
-  background: #f8f7fc; // TODO:リファクタ必要（複数使いまわしている箇所があるため、変数にまとめる）
+  background: $background-base; // TODO:リファクタ必要（複数使いまわしている箇所があるため、変数にまとめる）
   padding: $space_l $space_xl;
   &-item {
     margin-bottom: $space_s;
@@ -546,7 +548,7 @@ img {
 // Utility
 // ==================================
 .bgColor-lightGray { // TODO:リファクタ必要（色が後から修正が入り、赤色になったら？）
-  background: #f8f7fc;
+  background: $background-base;
   box-shadow: 0px 0px 8px 2px #ddd inset;
 }
 
