@@ -11,4 +11,10 @@ $(function () {
     $(this).toggleClass('active');
     $('.js-toggle-sp-menu-target').toggleClass('active');
   });
+
+  //SPメニュークリックでメニューを閉じる
+  $('.js-menu-link').on('click', function() {
+    $('.js-toggle-sp-menu-target').toggleClass('active');
+  });
+
 });
