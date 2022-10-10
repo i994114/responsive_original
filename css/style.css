@@ -186,7 +186,7 @@ img {
     top: 28px; }
   .container-ornament .container-title:after {
     top: -28px; }
-  .container-ornament .container-title-lightGray span {
+  .container-ornament .container-title-base span {
     background: #f8f7fc; }
 
 .news {
@@ -339,7 +339,7 @@ img {
     .footer {
       font-size: 12px; } }
 
-.bgColor-lightGray {
+.bgColor-base {
   background: #f8f7fc;
   box-shadow: 0px 0px 8px 2px #ddd inset; }
 
