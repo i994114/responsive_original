@@ -41,7 +41,7 @@ $font-color_date: #e37b89; // TODO:リファクタ必要
 $color_corp: #e3a8b1;
 $font-color_sub1: #b6a489;
 
-$site-width: 980px;
+$site-width: 100%;
 
 $font-size_s: 12px;
 $font-size_m: 14px;
@@ -95,6 +95,11 @@ $breakpoints: (
 // #{}は「インターポーレーション」といって、演算できない箇所、変数使えない箇所でも使えるようにするものcalcなどでよく使う
 // http://book.scss.jp/code/c4/08.html
 @mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+@mixin ipad($breakpoint: md) {
   @media #{map-get($breakpoints, $breakpoint)} {
     @content;
   }
@@ -430,16 +435,25 @@ img {
     }
   }
   &-group {
+    
+    @include ipad() {
+      margin-right: 0;
+    }
+    
     margin-right: -$space_l;
     &-float {
       overflow: hidden;
     }
     &-flex {
       display: flex;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      justify-content: space-between;
     }
     .panel {
       float: left;
+      @include ipad() {
+        margin-right: calc;
+      }
       margin-right: $space_l;
       margin-bottom: $space_l;
       box-sizing: border-box;
@@ -456,6 +470,9 @@ img {
     @include mq() {
       width: 100%;
       margin: 0 auto $space_l auto;
+    }
+    &:nth-of-type(3) {
+      margin-right: 0;
     }
   }
 }
