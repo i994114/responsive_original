@@ -298,6 +298,7 @@ img {
 // container
 // ==================================
 .container {
+  //タブレットでは100%表示、PCではH2タイトルは980px
   @include ipad() {
     width: 100%;
   }
@@ -458,6 +459,11 @@ img {
       float: left;
       margin-right: $space_l;
       @include ipad() {
+        //全体の横幅768
+        //ひとつのクラスのwidth708
+        //768 - 708 = 60
+        //横に4つある画像のうち、右端はmargin-rightつけないので、3で割る
+        //60 / 3 = 20
         margin-right: 20px;
       }
       margin-bottom: $space_l;
@@ -467,6 +473,7 @@ img {
   &-staff {
     width: calc(25% - #{$space_l});
     
+    //右端の2つのマージンを消すことで、ネガティブマージンを解消
     @include ipad() {
       &:nth-of-type(4) {
         margin-right: 0;
@@ -486,6 +493,7 @@ img {
       width: 100%;
       margin: 0 auto $space_l auto;
     }
+    //右端ののマージンを消すことで、ネガティブマージンを解消
     &:nth-of-type(3) {
       margin-right: 0;
     }
