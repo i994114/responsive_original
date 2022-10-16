@@ -146,11 +146,14 @@ img {
         display: block; } }
 
 .container {
-  width: 100%;
+  width: 980px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 80px;
   padding-bottom: 120px; }
+  @media screen and (max-width: 768px) {
+    .container {
+      width: 100%; } }
   @media screen and (max-width: 414px) {
     .container {
       width: 100%; } }
@@ -249,30 +252,32 @@ img {
       .panel-badge {
         top: -20px;
         right: -13px; } }
-  .panel-group {
-    margin-right: -15px; }
+  @media screen and (max-width: 768px) {
+    .panel-group {
+      margin-right: 0; } }
+  .panel-group-float {
+    overflow: hidden; }
+  .panel-group-flex {
+    display: flex;
+    flex-wrap: wrap; }
     @media screen and (max-width: 768px) {
-      .panel-group {
-        margin-right: 0; } }
-    .panel-group-float {
-      overflow: hidden; }
-    .panel-group-flex {
-      display: flex;
-      justify-content: space-between; }
-    .panel-group .panel {
-      float: left;
-      margin-right: 20px;
-      margin-bottom: 15px;
-      box-sizing: border-box; }
-      @media screen and (max-width: 768px) {
-        .panel-group .panel {
-          margin-right: calc; } }
+      .panel-group-flex {
+        justify-content: space-between; } }
+  .panel-group .panel {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box; }
+    @media screen and (max-width: 768px) {
+      .panel-group .panel {
+        margin-right: 20px; } }
   .panel-staff {
     width: calc(25% - 15px); }
-    .panel-staff:nth-of-type(4) {
-      margin-right: 0; }
-    .panel-staff:nth-of-type(8) {
-      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      .panel-staff:nth-of-type(4) {
+        margin-right: 0; }
+      .panel-staff:nth-of-type(8) {
+        margin-right: 0; } }
     @media screen and (max-width: 414px) {
       .panel-staff {
         width: calc(50% - 15px); } }

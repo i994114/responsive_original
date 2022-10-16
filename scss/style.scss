@@ -41,7 +41,7 @@ $font-color_date: #e37b89; // TODO:リファクタ必要
 $color_corp: #e3a8b1;
 $font-color_sub1: #b6a489;
 
-$site-width: 100%;
+$site-width: 980px;
 
 $font-size_s: 12px;
 $font-size_m: 14px;
@@ -298,6 +298,9 @@ img {
 // container
 // ==================================
 .container {
+  @include ipad() {
+    width: 100%;
+  }
   width: $site-width;
   @include mq() {
     width: 100%;
@@ -440,34 +443,39 @@ img {
       margin-right: 0;
     }
     
-    margin-right: -$space_l;
+    // margin-right: -$space_l;
     &-float {
       overflow: hidden;
     }
     &-flex {
       display: flex;
-      // flex-wrap: wrap;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      @include ipad() {
+        justify-content: space-between;
+      }
     }
     .panel {
       float: left;
+      margin-right: $space_l;
       @include ipad() {
-        margin-right: calc;
+        margin-right: 20px;
       }
-      // margin-right: $space_l;
-      margin-right: 20px;
       margin-bottom: $space_l;
       box-sizing: border-box;
     }
   }
   &-staff {
     width: calc(25% - #{$space_l});
-    &:nth-of-type(4) {
-      margin-right: 0;
+    
+    @include ipad() {
+      &:nth-of-type(4) {
+        margin-right: 0;
+      }
+      &:nth-of-type(8) {
+        margin-right: 0;
+      }
     }
-    &:nth-of-type(8) {
-      margin-right: 0;
-    }
+    
     @include mq() {
       width: calc(50% - #{$space_l});
     }
