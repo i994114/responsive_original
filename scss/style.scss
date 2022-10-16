@@ -454,13 +454,20 @@ img {
       @include ipad() {
         margin-right: calc;
       }
-      margin-right: $space_l;
+      // margin-right: $space_l;
+      margin-right: 20px;
       margin-bottom: $space_l;
       box-sizing: border-box;
     }
   }
   &-staff {
     width: calc(25% - #{$space_l});
+    &:nth-of-type(4) {
+      margin-right: 0;
+    }
+    &:nth-of-type(8) {
+      margin-right: 0;
+    }
     @include mq() {
       width: calc(50% - #{$space_l});
     }
@@ -535,6 +542,7 @@ img {
   }
   &-corp {
     // グラーデーション参考 https://uigradients.com/
+    //memo:グラテーションはコピペでいいらしい
     color: #fff;
     background: #ee9ca7; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7); /* Chrome 10-25, Safari 5.1-6 */
