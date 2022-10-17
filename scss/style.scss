@@ -287,6 +287,7 @@ img {
     }
   }
   br {
+    //memo:brタグにこれをやると、htmlのbrタグが無効となる
     display: none;
     @include mq() {
       display: block;
@@ -339,6 +340,7 @@ img {
         position: relative;
         z-index: 1;
       }
+      //memo:前と後ろにスタイル要素を追加するよ、という意味
       &:before, &:after {
         border-top: 1px solid #2e1f1a;
         content: "";
@@ -482,7 +484,14 @@ img {
         margin-right: 0;
       }
     }
-    
+    @include mq() {
+      &:nth-of-type(2) {
+        margin-right: 0;
+      }
+      &:nth-of-type(6) {
+        margin-right: 0;
+      }
+    }
     @include mq() {
       width: calc(50% - #{$space_l});
     }
@@ -497,6 +506,13 @@ img {
     &:nth-of-type(3) {
       margin-right: 0;
     }
+    &:nth-of-type(2) {
+      margin-right: 0;
+    }
+    &:nth-of-type(1) {
+      margin-right: 0;
+    }
+
   }
 }
 

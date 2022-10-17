@@ -279,6 +279,11 @@ img {
       .panel-staff:nth-of-type(8) {
         margin-right: 0; } }
     @media screen and (max-width: 414px) {
+      .panel-staff:nth-of-type(2) {
+        margin-right: 0; }
+      .panel-staff:nth-of-type(6) {
+        margin-right: 0; } }
+    @media screen and (max-width: 414px) {
       .panel-staff {
         width: calc(50% - 15px); } }
   .panel-cource {
@@ -288,6 +293,10 @@ img {
         width: 100%;
         margin: 0 auto 15px auto; } }
     .panel-cource:nth-of-type(3) {
+      margin-right: 0; }
+    .panel-cource:nth-of-type(2) {
+      margin-right: 0; }
+    .panel-cource:nth-of-type(1) {
       margin-right: 0; }
 
 .form {
