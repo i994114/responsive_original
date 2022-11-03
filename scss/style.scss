@@ -146,6 +146,7 @@ img {
   width: 100%;
   height: 80px;
   color: $font-color_default;
+  //memo:ここのflexは、header欄自体のものであり、メニューを横並びにするやつじゃない
   display: flex;
   align-items: center;
   justify-content: space-between;
