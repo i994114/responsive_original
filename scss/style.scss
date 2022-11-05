@@ -232,6 +232,8 @@ img {
   width: 40px;
   height: 32px;
   z-index: 3;
+  //memo:ハンバーガーメニューの3本の線のcss
+  //     すべて同じcssをあて、位置だけをnth-of-typeつかって横3列にしている
   span {
     display: inline-block;
     transition: all .4s;
