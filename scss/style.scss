@@ -157,6 +157,7 @@ img {
   z-index: 2;
   &.float-active {
     transition: .3s;
+    //memo:文字だけを透化させたいのでrbgaを使用
     background: rgba(255, 255, 255, 0.9);
   }
   @include mq() {
