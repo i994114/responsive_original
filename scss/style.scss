@@ -406,7 +406,7 @@ img {
     transition: .5s;
     &:hover {
       transform: scale(1.03);
-      box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+      box-shadow: 10 10 10px rgba(0, 0, 0, .3);
       transition: .5s;
     }
   }
